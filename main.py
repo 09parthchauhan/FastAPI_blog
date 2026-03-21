@@ -17,6 +17,7 @@ posts : list[dict] = [
         "age" : 24,
     },
 ]
+book = ["harry potter", "narnia", {"author" : "j.k.rowling",}]
 
 @app.get("/api/posts")
 def get_posts():
@@ -30,4 +31,8 @@ def home():
 @app.get("/name")
 def profile():
     return {"name" : "Parth Chauhan"}
+
+@app.get("/api/books")
+def get_books():
+    return book
 
